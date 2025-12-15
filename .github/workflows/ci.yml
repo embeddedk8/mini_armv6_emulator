@@ -101,7 +101,9 @@ jobs:
 
     strategy:
       matrix:
-        os: [macos-14, ubuntu-24.04, windows-2022]
+        os: [macos-14, ubuntu-24.04]
+        # Removed windows test because it doesn't support C23 standard
+        # os: [macos-14, ubuntu-24.04, windows-2022]
 
     runs-on: ${{ matrix.os }}
 
